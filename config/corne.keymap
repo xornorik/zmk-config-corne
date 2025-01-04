@@ -79,17 +79,17 @@
 
         LParen {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <19 20>;
+            key-positions = <7 8>;
         };
 
         RParen {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <20 21>;
+            key-positions = <8 9>;
         };
 
         Mac_Copy {
             bindings = <&kp RG(C)>;
-            key-positions = <25 26>;
+            key-positions = <26 27>;
         };
 
         Mac_Paste {
