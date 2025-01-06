@@ -100,6 +100,11 @@
             bindings = <&kp LG(V)>;
             key-positions = <27 28>;
         };
+
+        Mac_cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <25 26>;
+        };
     };
 
     keymap {
@@ -125,7 +130,7 @@
 &trans       &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR    &kp PERCENT    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp N0           &trans
 &trans       &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp NUMBER_0  &kp PIPE       &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &trans
 &kp C_RESET  &trans           &trans         &trans        &trans        &trans         &kp MINUS  &kp N1  &kp N2  &kp N3  &kp PERIOD       &trans
-                                             &trans        &trans        &trans         &trans     &trans  &to 1
+                                             &trans        &trans        &trans         &trans     &trans  &trans
             >;
         };
 
@@ -137,10 +142,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &msc SCRL_UP    &msc SCRL_LEFT   &mmv MOVE_UP          &msc SCRL_RIGHT  &trans              &mkp RCLK          &kp HOME                 &kp UP    &kp END              &kp PAGE_UP    &trans
-&trans  &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN        &mmv MOVE_RIGHT  &trans              &mkp LCLK          &td LG(LEFT) LEFT_ARROW  &kp DOWN  &td LG(RIGHT) RIGHT  &kp PAGE_DOWN  &trans
-&trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans                   &trans    &trans               &trans         &trans
-                                         &trans                &trans           &trans              &trans             &trans                   &to 1
+&trans  &msc SCRL_UP    &msc SCRL_LEFT   &mmv MOVE_UP          &msc SCRL_RIGHT        &trans              &mkp RCLK          &kp HOME  &kp UP    &kp END    &kp PAGE_UP    &trans
+&trans  &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN        &mmv MOVE_RIGHT        &trans              &mkp LCLK          &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &trans
+&trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans    &trans    &trans     &trans         &trans
+                                         &trans                &trans                 &trans              &trans             &trans    &trans
             >;
         };
 
@@ -149,7 +154,7 @@
 &kp F1          &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7            &kp F8                &kp F9                &kp F10     &kp F11         &kp F12
 &bt BT_CLR      &trans        &trans        &trans        &bt BT_PRV    &bt BT_NXT      &kp K_PLAY_PAUSE  &kp K_VOLUME_DOWN     &kp K_VOLUME_UP       &kp K_NEXT  &kp K_PREVIOUS  &trans
 &bt BT_CLR_ALL  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0    &trans            &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &trans          &trans
-                                            &trans        &trans        &trans          &trans            &trans                &trans
+                                            &trans        &trans        &trans          &trans            &trans                &to 0
             >;
         };
     };
