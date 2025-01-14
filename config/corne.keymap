@@ -62,9 +62,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <100>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <38 39>;
             hold-trigger-on-release;
+        };
+
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <1000>;
         };
     };
 
@@ -118,10 +127,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC   &kp Q         &kp W            &kp E            &kp R              &kp T           &kp Y       &kp U               &kp I             &kp O            &kp P                    &kp MINUS
-&kp TAB   &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F  &kp G           &kp H       &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMI  &kp SQT
-&kp CAPS  &kp Z         &kp X            &kp C            &kp V              &kp B           &kp N       &kp M               &kp COMMA         &kp DOT          &kp FSLH                 &td LC(GRAVE) GRAVE
-                                         &kp LEFT_GUI     &sk LEFT_SHIFT     &slt 1 SPACE    &slt 2 RET  &kp BACKSPACE       &tog 3
+&kp ESC   &kp Q         &kp W            &kp E            &kp R                     &kp T           &kp Y       &kp U               &kp I             &kp O            &kp P                    &kp MINUS
+&kp TAB   &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_GUI D  &hml LEFT_SHIFT F         &kp G           &kp H       &hmr RIGHT_SHIFT J  &hmr RIGHT_GUI K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMI  &kp SQT
+&kp CAPS  &kp Z         &kp X            &kp C            &kp V                     &kp B           &kp N       &kp M               &kp COMMA         &kp DOT          &kp FSLH                 &td LC(GRAVE) GRAVE
+                                         &kp LEFT_GUI     &sticky_shift LEFT_SHIFT  &slt 1 SPACE    &slt 2 RET  &kp BACKSPACE       &tog 3
             >;
         };
 
