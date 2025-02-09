@@ -60,13 +60,12 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <125>;
             quick-tap-ms = <100>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             hold-trigger-key-positions = <38 39>;
             hold-while-undecided;
             hold-trigger-on-release;
-            require-prior-idle-ms = <50>;
         };
 
         sticky_shift: sticky_shift {
