@@ -65,7 +65,6 @@
             flavor = "hold-preferred";
             hold-trigger-key-positions = <38 39>;
             hold-trigger-on-release;
-            hold-while-undecided;
         };
 
         sticky_shift: sticky_shift {
